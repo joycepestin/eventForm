@@ -5,18 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Event Form</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/index.js"></script>
+    <style>
+
+        h3{
+
+            margin-left: 45%;
+            margin-top: 5%;
+        }
+
+        fieldset
+        {
+            margin-left: 25%;
+            margin-top: 5%;
+            margin-right: 25%;
+            padding-top: 40px;
+            padding-bottom: 70px;
+            
+        }
+
+        #input-event-title{
+
+            width: 400px;
+            
+        }
+
+        .event
+        {
+            margin-left: 80px;
+        }
+
+        .save
+        {
+            width: 100px;
+            height: 40px;
+            margin-left: 27%;
+            margin-top: 4%;
+
+        }
+
+        .cancel
+        {
+            width: 100px;
+            height: 40px;
+        }
+    </style>
+    <script src="form.js"></script>
 </head>
 <body>
+    <h3>Create a new Event</h3>
+
         
         <form name="form" onsubmit="return validation()">
             <fieldset>
-                <legend>Create a New Event</legend>
                 <div class="event">
                         <label for="event-type" >Event Type:</label>
                         <select id="event-input" name="eventInp">
-                            <option>Choose one</option>
+                            <option value=""></option>
                             <option value="Organizational">Organizational</option>
                             <option value="Tutorial">Tutorial</option>
                             <option value="Cultural">Cultural</option>
@@ -28,14 +72,14 @@
                     <br>
                     <br>
 
-                    <div class>
-                        <label for="event-title">Event Title:</label>
+                    <div class="eventTitle">
+                        <label for="event-title" placeholder="Ex: ">Event Title:</label>
                         <input type="text" id="input-event-title" name="inpEvent" >
                     </div>
 
                     <br>
 
-                    <div>
+                    <div class="eventDate   ">
                         <label for="event-date">Event Dates:</label>
                         <input type="date" id="inp-date-from" name="inp-date-from">
                         <label for="event-date">to</labe>
@@ -44,14 +88,14 @@
 
                     <br>
 
-                    <div>
+                    <div class="postingDate">
                         <label for="posting-date">Posting Date:</label>
                         <input type="date" id="input-posting-date" name="input-posting-date">
                     </div>
 
                     <br>
 
-                    <div>
+                    <div class="checkboxes">
                         <input type="checkbox" name="checkbox1" id="chbx1">
                         <label for="checkbox1"> Is registration required? </label><br>
                         <input type="checkbox" name="checkbox2" id="chbx2">
