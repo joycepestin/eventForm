@@ -2,74 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Event Form</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/index.js"></script>
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
 </head>
 <body>
-        
-        <form name="form" onsubmit="return validation()">
-            <fieldset>
-                <legend>Create a New Event</legend>
-                <div class="event">
-                        <label for="event-type" >Event Type:</label>
-                        <select id="event-input" name="eventInp">
-                            <option>Choose one</option>
-                            <option value="Organizational">Organizational</option>
-                            <option value="Tutorial">Tutorial</option>
-                            <option value="Cultural">Cultural</option>
-                            <option value="Educational">Educational</option>
-                            <option value="Seminar">Seminar</option>
-                            <option value="Ceremony">Ceremony</option>
-                        </select>
+        <div class="container">
+            <div class="inner-margin">
+                <form name="vform" onsubmit="return validate()">
+                    <label for="login">Log In: </label>
+                    <input type="text" class="textarea" id="login_inp">
+                    
 
                     <br>
                     <br>
 
-                    <div class>
-                        <label for="event-title">Event Title:</label>
-                        <input type="text" id="input-event-title" name="inpEvent" >
+                    <label for="pass">Password: </label>
+                    <input type="password" required maxlength="16" class="pwd" id="pass_inp">
+                    
+                    <br>
+                    <br>
+                    <div class="pass_div">
+
+                        <label for="cPass">Confirm Password: </label>
+                        <input type="password" required class="confirm-pwd" id="cpass_inp">
+
+                    </div>
+                   
+                    <br>
+                    <br>
+
+                    <label for="gender">Gender: </label>
+                    <select class="gender-inp" id="gender_inp">
+                        <option>male</option>
+                        <option>female</option>
+                        <option>others</option>
+                    </select>
+                   
+                    <br>
+                    <br>
+
+                    <label for="email">Email: </label>
+                    <input type="email" required class="email-inp" id="email_inp">
+                   
+                    <br>
+                    <br>
+                    <div class="btn">
+                        <button onclick="validation()">Register</button>
                     </div>
 
-                    <br>
-
-                    <div>
-                        <label for="event-date">Event Dates:</label>
-                        <input type="date" id="inp-date-from" name="inp-date-from">
-                        <label for="event-date">to</labe>
-                        <input type="date" id="inp-date-to"  name="inp-date-to">
-                    </div>
-
-                    <br>
-
-                    <div>
-                        <label for="posting-date">Posting Date:</label>
-                        <input type="date" id="input-posting-date" name="input-posting-date">
-                    </div>
-
-                    <br>
-
-                    <div>
-                        <input type="checkbox" name="checkbox1" id="chbx1">
-                        <label for="checkbox1"> Is registration required? </label><br>
-                        <input type="checkbox" name="checkbox2" id="chbx2">
-                        <label for="checkbox2"> Is this event associated with any Family programs? </label><br>
-                        <input type="checkbox" name="checkbox3" id="chbx3">
-                        <label for="checkbox3"> Is there a point of contact? </label><br>
-                        <input type="checkbox" name="checkbox4" id="chbx4">
-                        <label for="checkbox4"> Is there a hosting Command Point of Contact? </label><br>
-                    </div>
-
-                    <br> 
-
-                    <input type="submit" class="save" value="Save"><!--onclick="display()"-->
-
-                    <button class="cancel" onclick="cancelled()">Cancel</button>
-                  
-                </div>
-            </fieldset>
-        </form>
+                   
+                </form>
+            </div>
+        </div>
 </body>
 </html>
